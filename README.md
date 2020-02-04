@@ -13,3 +13,12 @@ cd rale/setup
 
 # Usage
 ` rale [Your Code] [Arguments]`
+
+# Recommendation
+**Its Better That You Add Path Of Compiler At The First Of File.**
+Example :
+```
+    #!/usr/bin/python
+    ...
+```
+**In The Other Shapes Maybe Program Detect Incorrect Or Something Strange Happend !!!**
