@@ -1,0 +1,47 @@
+#!/usr/bin/python3
+
+# Import Libraries
+import os, sys, subprocess
+
+# Import Other Files Here
+sys.path.append("/usr/bin/god_data")
+import checker
+
+# All Important Variables
+config_file = "/usr/bin/god_data/config.ini"
+
+# Get Ready To Run GOD
+if len(sys.argv) < 2 :
+    print("""
+    Usage : god [Your File] [Switches] 
+     """)
+    exit(0)
+if not os.path.exists(sys.argv[1]):
+    print("Sorry, File Not Found !")
+    exit(0)
+
+# Read Config File
+config = open(config_file)
+config_lines = config.readlines()
+config.close()
+tar = checker.tryToFind(sys.argv[1])
+if tar == 404:
+    for i in config_lines:
+        data = i.split("=")
+        p = subprocess.Popen(data[1].strip() + " " + " ".join(sys.argv[1:]), shell=True, stdin=subprocess.PIPE, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, close_fds=True)
+        out,err = p.communicate()
+        s = out.decode('utf-8')
+        if checker.is_ok(s.lower()):
+            print(s)
+            exit(0)
+else:
+    for i in config_lines:
+        if tar not in i.lower():
+            continue
+        data = i.split("=")
+        p = subprocess.Popen(data[1].strip() + " " + " ".join(sys.argv[1:]), shell=True, stdin=subprocess.PIPE, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, close_fds=True)
+        out,err = p.communicate()
+        s = out.decode('utf-8')
+        print(s.strip())
+        break
+

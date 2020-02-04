@@ -1,0 +1,5 @@
+python=python
+python3=python3
+shell script=bash
+c++=c++
+c=c
