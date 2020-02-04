@@ -10,7 +10,7 @@ def is_ok(string):
 
 def tryToFind(string):
     s = os.popen("file " + string).read()
-    f = open("/usr/bin/god_data/repo.txt")
+    f = open("/usr/bin/rale_data/repo.txt")
     data = f.readlines()
     f.close()
     for i in data:

@@ -4,16 +4,16 @@
 import os, sys, subprocess
 
 # Import Other Files Here
-sys.path.append("/usr/bin/god_data")
+sys.path.append("/usr/bin/rale_data")
 import checker
 
 # All Important Variables
-config_file = "/usr/bin/god_data/config.ini"
+config_file = "/usr/bin/rale_data/config.ini"
 
 # Get Ready To Run GOD
 if len(sys.argv) < 2 :
     print("""
-    Usage : god [Your File] [Switches] 
+    Usage : rale [Your File] [Switches] 
      """)
     exit(0)
 if not os.path.exists(sys.argv[1]):
