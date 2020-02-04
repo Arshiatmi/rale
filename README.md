@@ -14,6 +14,9 @@ cd rale/setup
 # Usage
 ` rale [Your Code] [Arguments]`
 
+# RALE Shell
+Easily Type `rale` !
+
 # Recommendation
 **Its Better That You Add Path Of Compiler At The First Of File.**
 Example :
