@@ -1,6 +1,6 @@
 import os
 
-unallowed = ["traceback","error"]
+unallowed = ["traceback","error","exit status"]
 
 def is_ok(string):
     for i in unallowed:
