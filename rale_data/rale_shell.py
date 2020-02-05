@@ -10,4 +10,4 @@ while cmd != "exit":
                 print(s)
         continue
     except:
-        pass
+        print("Sorry ! Command Was Not Found !")

@@ -10,7 +10,7 @@ import checker
 # All Important Variables
 config_file = "/usr/bin/rale_data/config.ini"
 
-# Get Ready To Run GOD
+# Get Ready To Run RALE
 if len(sys.argv) < 2 :
     os.system("/usr/bin/rale_data/rale_shell.py")
     exit(0)
