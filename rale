@@ -5,7 +5,7 @@ import os, sys, subprocess
 
 # Import Other Files Here
 sys.path.append("/usr/bin/rale_data")
-import checker
+import rale_data.checker
 
 # All Important Variables
 config_file = "/usr/bin/rale_data/config.ini"
